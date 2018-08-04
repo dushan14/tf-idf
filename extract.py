@@ -66,7 +66,8 @@ def do_process(file_list):
 
 		#words=re.findall(r'[a-zA-Z]+[\w\']+',lowercased)
 		words = nltk.wordpunct_tokenize(lowercased)
-		words = [w for w in words if (w.isalpha() and len(w) != 1 and w not in stop_words)]
+		# words = [w for w in words if (w.isalpha() and len(w) != 1 and w not in stop_words)]
+		words = [w for w in words if (w.isalpha() and len(w) != 1 )]
 
 		words_set=sorted(set(words))
 
